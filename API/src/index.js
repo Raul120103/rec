@@ -1,10 +1,6 @@
 import db from './db.js';
 import express from 'express';
 import cors from 'cors';
-import path from 'path'
-
-
-
 
 const app = new express()
 app.use(cors())

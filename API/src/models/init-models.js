@@ -167,9 +167,11 @@ import _insf_tb_usuario from  "./insf_tb_usuario.js";
 import _insf_tb_usuario_endereco from  "./insf_tb_usuario_endereco.js";
 import _insf_tb_usuario_endereco_uf from  "./insf_tb_usuario_endereco_uf.js";
 import _tb_endereco from  "./tb_endereco.js";
+import _tb_lista_diabolica from  "./tb_lista_diabolica.js";
 import _tb_lista_negra from  "./tb_lista_negra.js";
 import _tb_pessoas from  "./tb_pessoas.js";
 import _tb_produto from  "./tb_produto.js";
+import _tb_rodrigo from  "./tb_rodrigo.js";
 
 export default function initModels(sequelize) {
   const infoa_dtb_tb_cliente = _infoa_dtb_tb_cliente.init(sequelize, DataTypes);
@@ -339,9 +341,11 @@ export default function initModels(sequelize) {
   const insf_tb_usuario_endereco = _insf_tb_usuario_endereco.init(sequelize, DataTypes);
   const insf_tb_usuario_endereco_uf = _insf_tb_usuario_endereco_uf.init(sequelize, DataTypes);
   const tb_endereco = _tb_endereco.init(sequelize, DataTypes);
+  const tb_lista_diabolica = _tb_lista_diabolica.init(sequelize, DataTypes);
   const tb_lista_negra = _tb_lista_negra.init(sequelize, DataTypes);
   const tb_pessoas = _tb_pessoas.init(sequelize, DataTypes);
   const tb_produto = _tb_produto.init(sequelize, DataTypes);
+  const tb_rodrigo = _tb_rodrigo.init(sequelize, DataTypes);
 
   infoa_dtb_tb_livro.belongsTo(infoa_dtb_tb_genero, { as: "ID_GENERO_infoa_dtb_tb_genero", foreignKey: "ID_GENERO"});
   infoa_dtb_tb_genero.hasMany(infoa_dtb_tb_livro, { as: "infoa_dtb_tb_livros", foreignKey: "ID_GENERO"});
@@ -748,8 +752,10 @@ export default function initModels(sequelize) {
     insf_tb_usuario_endereco,
     insf_tb_usuario_endereco_uf,
     tb_endereco,
+    tb_lista_diabolica,
     tb_lista_negra,
     tb_pessoas,
     tb_produto,
+    tb_rodrigo,
   };
 }

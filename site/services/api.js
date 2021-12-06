@@ -7,7 +7,7 @@ const api = axios.create({
 export default class Api{
 
     async ListaPessoas (){
-        let r = await api.get('/tb_pessoas')
+        let r = await api.get('/lista/${idpessoa}')
         return r.data; 
     }
 
