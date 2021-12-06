@@ -14,7 +14,7 @@ app.get('/pessoas', async (req, resp) => {
         resp.send(uuso)
 
     } catch (e) {
-        resp.send({erro: e.toString()})
+        resp.send({ erro: e.toString() })
     }
 });
 app.post('/pessoa', async (req, resp) => {
@@ -24,12 +24,12 @@ app.post('/pessoa', async (req, resp) => {
 
     let p = await db.tb_pessoas.findOne({
         where: {
-             nm_nome
+            nm_nome
         }
     })
 
-    if(p == null)
-    return resp.send({erro: 'erro'});
+    if (p == null)
+        return resp.send({ erro: 'erro' });
 
     resp.sendStatus(200);
 });

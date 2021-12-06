@@ -1,23 +1,25 @@
 import { ConteinerLista } from "./styled"
 import Api from "../../../services/api";
 import { useState } from "react";
-const api = new api ();
+const api = new api();
 
- export default function lista (){
+export default function lista() {
 
-        const [pessoa, setpessoas]= useState =>([]);
+        const [pessoa, setpessoas] = useState => ([]);
 
-        const inserirpessoa= async()=>{
-                const lista=await api.pessoa(1);
+        const inserirpessoa = async () => {
+                const lista = await api.pessoa(1);
                 setpessoas(inserirpessoa)
         }
 
-        return(
+        return (
 
-        <ConteinerLista>
-            <div className='lista'>
-                    ListaPessoas
-                qwqw
-                </div>
-        </ConteinerLista> 
-        )}
+                <ConteinerLista>
+                        <div className='lista'>
+                                ListaPessoas
+                                qwq
+
+                        </div>
+                </ConteinerLista>
+        )
+}
